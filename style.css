@@ -1,0 +1,497 @@
+body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212; /* Dark background color */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;                        
+            height: 100vh;
+            color: #FFFFFF;
+            overflow: hidden; /* Prevent horizontal scrolling */
+        }
+        
+        
+        .navbar {
+            display: flex;          
+            justify-content: space-between;
+            align-items: center;
+            background-color: #121212;
+            padding: 5px 5px; /* Increased padding for better spacing */           
+            width: 100%;           
+            
+        }
+        .navbar .logo {
+            font-size: 2rem; /* Thinner logo text */
+            font-weight: 900;
+            font-family: 'Billabong', cursive;
+            color: #FFFFFF;
+            margin-left: 10px; /* Adjusted for better alignment */
+        }
+        .icons {
+            display: flex;
+            align-items: center;
+        }
+        .icons iconify-icon {
+            font-size: 1.6rem; /* Thinner icons */
+            margin-right: 20px;
+            color: #FFFFFF;
+        }
+        .icons .messenger-icon {
+            margin-left: 10px; /* Adjust margin for better alignment */
+        }
+        .main-content {
+            margin-top: 15px; /* Adjust to account for navbar height */
+            margin-bottom: 60px; /* Adjust to account for footer height */
+            padding: 0 0px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 100%;
+            height: calc(100vh - 60px); /* Adjust for navbar and footer */
+            box-sizing: border-box;
+            
+        }
+        #feed {
+            width: 100%;
+            max-width: 100%; /* Full width for feed images */           
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-inded: 100;
+        }
+        .stories {
+            display: flex;
+            align-items: center;
+            background-color: transparent; /* Transparent background to blend with body color */
+            border-bottom: 1px solid #333;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 101%; /* Full width */
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+        }
+        .story {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 10px;
+            position: relative;
+        }
+        .story:not(:nth-child(1)):not(:nth-child(2))::before {
+            content: '';
+            position: absolute;
+            top: -4px; /* Adjust to make space for the black background */
+            left: -4px; /* Adjust to make space for the black background */
+            width: 88px; /* Adjusted for the black space and the gradient border */
+            height: 88px; /* Adjusted for the black space and the gradient border */
+            border-radius: 50%;
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); /* Gradient border */          
+            box-sizing: border-box;
+            z-index: -1; /* Ensure the pseudo-element is behind the image */
+        }
+        
+        .story:nth-child(2)::before {
+            content: '';
+            position: absolute;
+            top: -2px; /* Adjust to make space for the black background */
+            left: -2px; /* Adjust to make space for the black background */
+            width: 84px; /* Adjusted for the black space and the gradient border */
+            height: 84px; /* Adjusted for the black space and the gradient border */
+            border-radius: 50%;
+            background: #11ff00;           
+            box-sizing: border-box;
+            z-index: -1; /* Ensure the pseudo-element is behind the image */
+        }
+        
+        .story:not(:first-child) img {
+            border: 4px solid #000;
+            border-radius: 50%;
+            height: 80px;
+            width: 80px;
+            background-color: #333; 
+            padding: 1px; 
+            margin-bottom: 5px;                    
+            object-fit: cover;
+            box-sizing: border-box;
+        }
+              
+        .story:first-child img{
+            border: 2px solid #333;
+            border-radius: 50%;
+            height: 80px;
+            width: 80px;          
+            margin-bottom: 5px;                    
+            object-fit: cover;
+            box-sizing: border-box;
+        }
+        
+        .story span {
+            font-size: 0.8rem;
+            text-align: center;
+            color: #FFFFFF;
+        }
+        .story .add-story {
+            position: absolute;
+            bottom: 20px;
+            right: 5px;
+            background-color: #0078ff;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #FFFFFF;
+            font-size: 1rem;
+            z-index: 2;
+        }
+        .post {
+            background-color: transparent;
+            margin-bottom: 60px;
+            border-radius: 5px;
+            width: 100%;       
+            position: relative;
+        }
+        
+        .profile-pic-container {
+            position: relative;
+            display: inline-block;
+        }
+        .profile-pic-container::before {
+            content: '';
+            position: absolute;
+            top: -4px; /* Reduced space to make the gradient border thinner */
+            left: -4px; /* Reduced space to make the gradient border thinner */
+            width: 40px; /* Adjusted for the thinner gradient border */
+            height: 40px; /* Adjusted for the thinner gradient border */
+            border-radius: 50%;
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); /* Gradient border */
+            padding: 2px; /* Space between the image and the gradient border */
+            box-sizing: border-box;
+            z-index: -1; /* Ensure the pseudo-element is behind the image */
+            background-color: #000; /* Black background for the space between the profile pic and gradient border */
+        }
+        
+        .profile-pic {
+            border-radius: 50%;
+            height: 32px; /* Consistent size for profile pictures */
+            width: 32px;
+            object-fit: cover;
+            background-color: #000; /* Black background for space */
+            padding: 2px; /* Space for the black background */
+            margin-right: 10px;
+            box-sizing: border-box;
+        }
+
+        .post-image-container{     
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    width: 100%;  
+    height: auto;          
+    overflow: hidden;
+        }
+
+        
+        /* Styles specific to post images and videos */
+        .post-img{
+            width: 100%; /* Full width for post images and videos */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Remove bottom space */
+        }
+        
+        .video-container {
+    position: relative;
+    width: 100%;  
+    height: auto;
+}
+
+.post-video {
+    width: 100%; /* Full width for the video */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove bottom space */
+}
+
+
+      .mute-control {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.2); /* Dark silver with transparency */
+            border: none;
+            border-radius: 50%;
+            width: 35px; /* Circle shape */
+            height: 35px; /* Circle shape */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Optional shadow for better visibility */
+            z-index: 1; /* Ensure it's above the video */
+        }
+        .mute-control iconify-icon {
+            pointer-events: none; /* Prevent the icon from blocking clicks */
+        }
+        .mute-control .volume {
+            display: none; /* Hide volume icon initially */
+        }
+
+        .post-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+        .post-header-left {
+            display: flex;
+            align-items: center;
+        }
+        .post-header-right {
+            display: flex;
+            align-items: center;
+            color: #888888;
+        }
+        
+        .upload-time{
+            margin-right: 15px;
+        }
+        
+       /* Post footer styling */
+.post-footer {
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack children vertically */
+    padding: 10px; /* Inner padding */
+    color: #888888; /* Grey text color */
+}
+
+/* Icon styling within the post footer */
+.post-footer iconify-icon {
+    font-size: 1.2rem; /* Icon size */
+    margin-right: 20px; /* Space to the right */
+    color: #FFFFFF; /* White color */
+}
+
+/* Like and comment section styling */
+.like-comment-section {
+    margin-top: 10px; /* Space above section */
+}
+
+/* Paragraph styling within the like/comment section */
+.like-comment-section p {
+    margin: 5px 0; /* Space above and below */
+}
+
+/* Like text styling */
+.likes {
+    color: #FFFFFF; /* White color */
+    font-weight: bold; /* Bold text */
+}
+
+/* Comment text styling */
+.comment {
+    color: #888888; /* Grey color */
+}
+
+/* Footer styling */
+.footer {
+    display: flex; /* Flexbox layout */
+    justify-content: space-around; /* Even space between items */
+    align-items: top; /* Align items to top */
+    background-color: #000000; /* Black background */
+    padding: 0; /* No padding */
+    position: fixed; /* Fixed at the bottom */
+    width: 100%; /* Full width */
+    bottom: 5px; /* Position slightly above bottom */
+}
+
+/* Icon styling within the footer */
+.footer iconify-icon {
+    font-size: 1.8rem; /* Icon size */
+    color: #FFFFFF; /* White color */
+    margin-top: 10px; /* Space above icon */
+    margin-bottom: 70px; /* Space below icon */
+}
+
+/* Profile icon styling within the footer */
+.footer .profile-icon {
+    position: relative; /* Relative position */
+    margin-top: 10px; /* Space above icon */
+    margin-bottom: 70px; /* Space below icon */
+}
+
+/* Profile image styling within the footer */
+.footer .profile-icon img {
+    border-radius: 50%; /* Circular shape */
+    height: 26px; /* Height */
+    width: 26px; /* Width */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+/* General styles for the tabs */
+.tabs {
+    display: none; /* Hidden by default */
+    background-color: transparent; /* Transparent background */
+    color: #333; /* Text color */
+    justify-content: left; /* Left-align items */
+    align-items: left; /* Align items to left */
+    padding: 10px 0; /* Vertical padding */
+    font-size: 1rem; /* Font size */
+    font-weight: 600; /* Bold text */
+    position: fixed; /* Fixed at the top */
+    top: 0; /* Top position */
+    left: 0; /* Left position */
+    width: 100%; /* Full width */
+    z-index: 10; /* Above other elements */
+    margin-left: 75px; /* Space for the navbar */
+}
+
+/* Tab item styling */
+.tabs .tab {
+    margin: 0 15px; /* Horizontal margin */
+    cursor: pointer; /* Pointer cursor */
+}
+
+/* Hover effect for tabs */
+.tabs .tab:hover {
+    color: white; /* Change text color */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 699px) {
+    .navbar .icons .home,
+    .navbar .icons .search,
+    .navbar .icons .reels,
+    .navbar .icons .upload,
+    .navbar .icons .profile-icon {
+        display: none; /* Hide these icons */
+    }
+
+    .navbar .icons .notifications-icon,
+    .navbar .icons .messenger-icon {
+        display: block; /* Show these icons */
+    }
+}
+
+/* Media query for larger screens */
+@media (min-width: 700px) {
+    .navbar .icons .home,
+    .navbar .icons .search,
+    .navbar .icons .reels,
+    .navbar .icons .upload,
+    .navbar .icons .profile-icon {
+        display: block; /* Show these icons */
+    }
+
+    .navbar .icons .notification,
+    .navbar .icons .messenger {
+        display: block; /* Ensure these icons are visible */
+    }
+
+    body {
+        display: flex; /* Flexbox layout */
+        flex-direction: row; /* Row direction */
+        height: 100vh; /* Full height */
+        padding-left: 18px; /* Left padding */
+        overflow: hidden; /* Prevent horizontal scrolling */
+    }
+
+    .tabs {
+        display: flex; /* Show tabs */
+    }
+
+    .navbar {
+        width: 65px; /* Adjusted width */
+        height: 100%; /* Full height */
+        position: fixed; /* Fixed position */
+        top: 0; /* Top position */
+        left: 0; /* Left position */
+        display: flex; /* Flexbox layout */
+        flex-direction: column; /* Column direction */
+        align-items: center; /* Center align items */
+        justify-content: center; /* Center vertically */
+        padding-top: 10px; /* Top padding */
+        background-color: #121212; /* Background color */
+        border-right: 1px solid #333; /* Right border */
+        z-index: 10; /* Above other elements */
+    }
+
+    .navbar .logo {
+        display: none; /* Hide logo */
+    }
+
+    .navbar .icons {
+        display: flex; /* Flexbox layout */
+        flex-direction: column; /* Column direction */
+        align-items: center; /* Center align items */
+        justify-content: center; /* Center vertically */
+        flex: 1; /* Grow to fill space */
+    }
+
+    .navbar .icons iconify-icon {
+        font-size: 2rem; /* Icon size */
+        color: #FFFFFF; /* Icon color */
+        margin: 10px 0; /* Vertical margin */
+        margin-bottom: 20px; /* Extra bottom margin */
+    }
+
+    /* Profile icon styling within the navbar */
+    .navbar .icons .profile-icon {
+        width: 40px; /* Width */
+        height: 40px; /* Height */
+        border-radius: 50%; /* Circular shape */
+        overflow: hidden; /* Hide overflow */
+    }
+
+    /* Profile image styling within the navbar */
+    .navbar .icons .profile-icon img {
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        object-fit: cover; /* Maintain aspect ratio */
+    }
+
+    .stories {
+        margin-left: 30px; /* Left margin */
+    }
+    
+    .post-image-container,
+    .post-video{
+        height: 80vh;
+    }
+    
+    .video-container{
+        position: relative;
+        width: 100%;
+        height: 80vh; /* Match the height of the video */
+    }
+
+    .post-header {
+        margin-left: 10px; /* Left margin */
+    }
+
+    .upload-time {
+        display: none; /* Hide upload time */
+    }
+
+    .post-footer iconify-icon {
+        font-size: 2rem; /* Larger icons */
+    }
+
+    .footer {
+        display: none; /* Hide footer */
+    }
+
+    .main-content {
+        margin-top: 50px; /* Top margin */
+        margin-left: 55px; /* Left margin */
+        width: calc(100% - 65px); /* Adjusted width */
+        overflow: auto; /* Enable scrolling */
+    }
+}

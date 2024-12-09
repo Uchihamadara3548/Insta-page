@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags and title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.009">
+    <title>Instagram Home Page</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Iconify Icons -->
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <!-- Logo section -->
+        <div class="logo">Instagram</div>
+        
+        <!-- Icons section -->
+        <div class="icons">
+            <!-- Notification Icon -->
+            <iconify-icon icon="mdi:heart-outline" class="notification"></iconify-icon>
+            <!-- Messenger Icon -->
+            <iconify-icon icon="ri:messenger-line" class="messenger"></iconify-icon>
+            <!-- Home Icon -->
+            <iconify-icon icon="majesticons:home-line" class="home"></iconify-icon>
+            <!-- Search Icon -->
+            <iconify-icon icon="iconamoon:search" class="search"></iconify-icon>
+            <!-- Upload Icon -->
+            <iconify-icon icon="simple-line-icons:plus" class="upload"></iconify-icon>
+            <!-- Reels Icon -->
+            <iconify-icon icon="bx:movie-play" class="reels"></iconify-icon>
+            
+            <!-- Profile Icon -->
+            <div class="profile-icon">
+                <img src="https://i.postimg.cc/GtHtRkjM/IMG-20230604-232054.png" alt="Profile Picture">
+            </div>
+        </div>
+    </div>
+
+    <!-- Tabs section -->
+    <div class="tabs">
+        <span class="tab">For You</span>
+        <span class="tab">Following</span>
+        <span class="tab">Favorites</span>
+    </div>
+
+    <!-- Main content area -->
+    <div class="main-content">
+        <!-- Feed section -->
+        <div id="feed">
+            <!-- Stories section -->
+            <div class="stories">
+                <!-- Individual story -->
+                <div class="story">                 
+                    <img src="https://i.postimg.cc/GtHtRkjM/IMG-20230604-232054.png" alt="Your Story">
+                    <div class="add-story">+</div>
+                    <span>Your Story</span>
+                </div>
+                <!-- More stories -->
+                <div class="story">                          
+                    <img src="https://picsum.photos/80/80?random=1" alt="Story 1">
+                    <span>Goku</span>             
+                </div>
+                <div class="story">
+                    <img src="https://picsum.photos/80/80?random=2" alt="Story 2">
+                    <span>Vegeta</span>
+                </div>
+                <div class="story">
+                    <img src="https://picsum.photos/80/80?random=3" alt="Story 3">
+                    <span>Naruto</span>
+                </div>
+                <div class="story">
+                    <img src="https://picsum.photos/80/80?random=4" alt="Story 4">
+                    <span>Sasuke</span>
+                </div>
+                <div class="story">
+                    <img src="https://picsum.photos/80/80?random=5" alt="Story 5">
+                    <span>Luffy</span>
+                </div>
+                <div class="story">
+                    <img src="https://picsum.photos/80/80?random=6" alt="Story 6">
+                    <span>Zoro</span>
+                </div>
+                <div class="story">
+                    <img src="https://picsum.photos/80/80?random=7" alt="Story 7">
+                    <span>Gohan</span>
+                </div>
+                <div class="story">
+                    <img src="https://picsum.photos/80/80?random=8" alt="Story 8">
+                    <span>Kakashi</span>
+                </div>
+                <div class="story">
+                    <img src="https://picsum.photos/80/80?random=9" alt="Story 9">
+                    <span>Jiraiya</span>
+                </div>
+                <div class="story">
+                    <img src="https://picsum.photos/80/80?random=10" alt="Story 10">
+                    <span>Gotenks</span>
+                </div>
+                <div class="story">
+                    <img src="https://picsum.photos/80/80?random=11" alt="Story 11">
+                    <span>Sanji</span>
+                </div>
+                <div class="story">
+                    <img src="https://picsum.photos/80/80?random=12" alt="Story 12">
+                    <span>Trunks</span>
+                </div>
+                <div class="story">
+                    <img src="https://picsum.photos/80/80?random=13" alt="Story 13">
+                    <span>Bulma</span>
+                </div>
+                <div class="story">
+                    <img src="https://picsum.photos/80/80?random=14" alt="Story 14">
+                    <span>Krillin</span>
+                </div>
+            </div>
+
+            <!-- First post -->
+            <div class="post">
+                <div class="post-header">
+                    <div class="post-header-left">
+                        <!-- Profile picture container -->
+                        <div class="profile-pic-container">
+                            <img src="https://i.postimg.cc/GtHtRkjM/IMG-20230604-232054.png" alt="Profile Picture" class="profile-pic">
+                        </div>
+                        <span>Madara</span> <!-- Username -->
+                    </div>
+                    <div class="post-header-right">
+                        <span class="upload-time"> • 2d</span>
+                        <iconify-icon icon="fe:elipsis-v"></iconify-icon>
+                    </div>
+                </div>
+                <div class="post-image-container">
+                <img src="https://picsum.photos/600/400?random=1" alt="Post Image" class="post-img"> <!-- Post image -->
+                </div>
+                <div class="post-footer">
+                    <div>
+                        <!-- Post interaction icons -->
+                        <iconify-icon icon="mynaui:heart"></iconify-icon>
+                        <iconify-icon icon="iconamoon:comment"></iconify-icon>
+                        <iconify-icon icon="ion:paper-plane-outline"></iconify-icon>
+                    </div>
+                    <div class="like-comment-section">
+                        <p class="likes">100 likes</p>
+                        <p class="comment"><strong>Madara</strong> This is a sample comment...</p>
+                        <span class="upload-time-footer"> 2 days ago</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second post -->
+            <div class="post">
+                <div class="post-header">
+                    <div class="post-header-left">
+                        <!-- Profile picture container -->
+                        <div class="profile-pic-container">
+                            <img src="https://picsum.photos/32/32?random=2" alt="Profile Picture" class="profile-pic"> <!-- Updated profile picture -->
+                        </div>
+                        <span>username2</span>
+                    </div>
+                    <div class="post-header-right">
+                        <span class="upload-time"> • 4d</span>
+                        <iconify-icon icon="fe:elipsis-v"></iconify-icon>
+                    </div>
+                </div>
+                <img src="https://picsum.photos/600/400?random=2" alt="Post Image" class="post-img"> <!-- Post image -->
+                <div class="post-footer">
+                    <div>
+                        <!-- Post interaction icons -->
+                        <iconify-icon icon="mynaui:heart"></iconify-icon>
+                        <iconify-icon icon="iconamoon:comment"></iconify-icon>
+                        <iconify-icon icon="ion:paper-plane-outline"></iconify-icon>
+                    </div>
+                    <div class="like-comment-section">
+                        <p class="likes">200 likes</p>
+                        <p class="comment"><strong>username2</strong> Another sample comment...</p>
+                        <span class="upload-time-footer"> 4 days ago</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post with video -->
+            <div class="post">
+                <div class="post-header">
+                    <div class="post-header-left">
+                        <!-- Profile picture container -->
+                        <div class="profile-pic-container">
+                            <img src="https://picsum.photos/32/32?random=3" alt="Profile Picture" class="profile-pic">
+                        </div>
+                        <span>username3</span>
+                    </div>
+                    <div class="post-header-right">
+                        <span class="upload-time"> • 1w</span>
+                        <iconify-icon icon="fe:elipsis-v"></iconify-icon>
+                    </div>
+                </div>
+                <!-- Video container -->
+                <div class="video-container">
+                    <video class="post-video" preload="auto" autoplay loop muted>
+                        <source src="https://res.cloudinary.com/druwlied9/video/upload/v1722546246/Luffy_Gear_5_vs_Kaido_Gigant_Cybust_-_Mobile_culfdg.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>" 
+                    <!-- Mute control button -->
+                    <button class="mute-control" aria-label="Mute/Unmute">
+                        <iconify-icon icon="mdi:mute" class="mute"></iconify-icon>
+                        <iconify-icon icon="mingcute:volume-fill" class="volume"></iconify-icon>
+                    </button>
+                </div>
+                <div class="post-footer">
+                    <div>
+                        <!-- Post interaction icons -->
+                        <iconify-icon icon="mynaui:heart"></iconify-icon>
+                        <iconify-icon icon="iconamoon:comment"></iconify-icon>
+                        <iconify-icon icon="ion:paper-plane-outline"></iconify-icon>
+                    </div>
+                    <div class="like-comment-section">
+                        <p class="likes">300 likes</p>
+                        <p class="comment"><strong>username3</strong> Sample comment...</p>
+                        <span class="upload-time-footer"> 1 week ago</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more posts here if needed -->
+        </div>
+    </div>
+
+    <!-- Footer section -->
+    <div class="footer">
+        <iconify-icon icon="majesticons:home-line" class="home"></iconify-icon>
+        <iconify-icon icon="iconamoon:search" class="search"></iconify-icon>
+        <iconify-icon icon="simple-line-icons:plus" class="upload"></iconify-icon>
+        <iconify-icon icon="bx:movie-play" class="reels"></iconify-icon>
+        <div class="profile-icon">
+            <img src="https://i.postimg.cc/GtHtRkjM/IMG-20230604-232054.png" alt="Profile Picture">
+        </div>
+    </div>
+</body>
+</html>
